@@ -32,7 +32,7 @@ pipeline {
                     sshPublisher(
                         publishers: [
                             sshPublisherDesc(
-                                configName: "Aqsa", 
+                                configName: "my_webserver", 
                                 transfers: [sshTransfer(
                                     execCommand: """
                                         docker pull mehrfatima/personal-portfolio:${env.BUILD_ID}
