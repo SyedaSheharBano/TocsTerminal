@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    dockerImage = docker.build("mehrfatima/personal-portfolio:${env.BUILD_ID}")
+                    dockerImage = docker.build("mehrfatima/personal-Portfolio:${env.BUILD_ID}")
                 }
             }
         }
@@ -52,7 +52,7 @@ pipeline {
     post {
         failure {
             mail(
-                to: 'sp20-bcs-049@cuiatk.edu.pk',
+                to: 'ssbano2000@gmail.com',
                 subject: "Failed Pipeline: ${env.JOB_NAME} [${env.BUILD_NUMBER}]",
                 body: "Something is wrong with the build ${env.BUILD_URL}"
             )
